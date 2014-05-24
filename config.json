@@ -1,0 +1,7 @@
+{
+    "aws-access-key": "AKIAJXMJMHI37O2N6LUA",
+    "aws-bucket-name": "adsnative-website",
+    "aws-bucket-website": "adsnative-website.s3-website-us-west-2.amazonaws.com",
+    "port": 8463,
+    "prettify": true
+}
