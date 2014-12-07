@@ -1,0 +1,1053 @@
+.project-list {
+	@include grid-columns(1, 1, auto);
+	background-color: $cream; // #575852;
+	border-top-color: $blue; // $text-color;
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		margin: 0 auto .1em;
+		// font-weight: 300;
+		font-weight: 600;
+		text-align: center;
+		color: $blue;
+	}
+
+	h1 {
+		font-size: 4em;
+		line-height: 1.2em;
+		font-weight: 600;
+		color: white;
+		margin-top: 0.25em;
+
+		& + p {
+			color: $localytics-4;
+			font-size: 1.25em;
+			font-style: italic;
+			text-transform: none;
+			letter-spacing: 0;
+			word-spacing: 0;
+		}
+	}
+
+	h2 {
+		font-size: 2.5em;
+		line-height: 1.1em;
+	}
+
+	h3 {
+		// font-weight: 600;
+		line-height: 1.1em;
+	}
+
+	h4 {
+		font-size: .75em;
+		letter-spacing: .15rem;
+		word-spacing: 0.1em;
+		text-transform: uppercase;
+	}
+
+	p {
+		font-size: .75em;
+		letter-spacing: .15rem;
+		word-spacing: 0.1em;
+		text-transform: uppercase;
+		text-align: center;
+		color: $text-color;
+	}
+
+	a {
+		color: $blue; // $yellow; // #fefefc;
+
+		&:hover {
+			color: $blue; // $yellow; // #fefefc;
+			border-bottom-color: $blue; // $yellow; // #fefefc;
+
+		}
+	}
+
+	section {
+		@include grid-columns(1, 1, auto);
+		// overflow: auto;
+
+		nav {
+			@include grid-columns(1, 1, auto);
+			margin-top: 4em;
+		}
+
+		ul {
+			// @include grid-columns(1, 1, auto);
+			width: 100%;
+			text-align: center;
+			overflow: auto;
+			margin-top: 0;
+		}
+
+		li {
+			@include grid-columns(1, 1, auto);
+			margin-bottom: 0.5em;
+			float: left;
+		}
+	}
+	
+	header {
+		margin-bottom: 1em;
+	}
+
+	.hero {
+		background-color: $localytics-5;
+		background-image: url(../img/localytics-hero.jpg);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		overflow: auto;
+		margin-top: .7em;
+		margin-bottom: 3em;
+	}
+
+	.project-list-archives li {
+		margin-bottom: .25em;
+	}
+}
+
+.project-detail {
+	margin-bottom: 0;
+	border-top-color: $link-sub-color;
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		margin-top: 1.75em;
+		text-align: center;
+	}
+
+	h1 {
+		font-size: 4em;
+		margin-top: 0.25em;
+		margin-bottom: 0;
+		margin-left: auto;
+		margin-right: auto;
+		color: $white;
+		font-weight: 600;
+
+		& + p {
+			margin-top: .25em; //.75em;
+		}
+	}
+
+	h2 {
+		font-weight: 400;
+		// font-size: 3.25em;
+		font-size: 2.75em;
+		width: 100%;
+	}
+
+	h3 {
+		font-weight: 600;
+	}
+
+	h4 {
+		color: $text-color;
+		font-size: 0.8em;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.085rem;
+		margin-bottom: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	footer {
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		h5 {
+			font-size: 2.25em;
+			font-weight: 600;
+		}
+	}
+
+	h2,
+	h3,
+	// h4,
+	h5,
+	h6 {
+		// width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: .6em;
+	}
+
+	.button {
+		display: inline-block;
+		clear: both;
+		text-align: center;
+	}
+
+	a:hover {
+		border-bottom-width: 2px;
+		border-bottom-style: solid;
+	}
+
+
+	section {
+		// max-width: 31.5em;
+	}
+
+	header {
+		margin-bottom: 1em;
+	}
+
+	p + figure {
+		margin-top: 6em;
+
+		&.blockquote {
+			margin-top: 2em;
+			margin-bottom: 2em;
+		}
+	}
+
+	figure {
+		& + h2 {
+			margin-top: 0.5em;
+		}
+
+		& + h3 {
+			margin-top: 1.25em;
+		}
+
+		& + figure {
+			margin-top: 1.25em;
+		}
+	} 
+
+	figcaption {
+		font-family: $sans;
+		font-size: 0.8em;
+		font-weight: 500;
+
+		p {
+			margin-top: 0;
+		}
+	}
+
+	dd ul {
+		margin-top: 0;
+	}
+
+	.hero {
+		margin-top: .7em;
+		// margin-bottom: 3em;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		overflow: auto;
+
+		* {
+			text-shadow: none;
+		}
+
+		p {
+			font-size: 1.25em;
+		}
+	}
+
+	.lead {
+		font-family: $sans;
+		font-size: 1.5em;
+		line-height: 1.3em;
+		margin-bottom: 0;
+		font-weight: 300;
+		// font-size: 1.15em;
+		// line-height: 1.4em;
+		// font-family: $serif;
+	}
+
+	.opening {
+		overflow: auto;
+		padding: 3em 0 1.5em;
+		color: $white;
+
+		& + section {
+			margin-top: 2em;
+		}
+
+		.lead {
+			color: $white;
+		}
+	}
+
+	// nav ul {
+	// 	text-align: center;
+
+	// 	li a{
+	// 		color: $link-sub-color;
+	
+	// 		&:hover {
+	// 			color: $link-sub-color-hover;
+	// 		}
+	// 	}
+	// }
+
+	.nav-global {
+		li {
+			display: inline-block;
+
+			&:nth-child(odd) {
+				text-align: left;
+			}
+	
+			&:nth-child(even) {
+				text-align: right;
+				clear: none;
+				margin-top: 0;
+			}
+		}
+
+		a {
+			color: $white !important;
+
+			&:hover {
+				color: $white !important;
+				border-bottom-color: $white !important; 
+			}
+		}
+	}
+
+	.tags {
+		// margin-top: 0;
+		margin-bottom: 2em;
+		text-align: center;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		li {
+			display: inline-block;
+			margin-top: 0.75em;
+			margin-bottom: .5em;
+
+			&:first-of-type {
+				// margin-top: 1.25em;
+			}
+	
+			a {
+				font-family: $sans;
+				margin: .1em .35em .15em;
+				border-radius: 4px;
+				border-width: 2px;
+				border-style: solid;
+				padding: .25em .75em .35em;	
+				// color: $white;
+				text-shadow: none;
+				white-space: nowrap;
+	
+				&:hover {
+					// border-bottom: none;
+				}		
+			}
+		}
+	}
+
+	dl {
+		text-align: center;
+
+		dt {
+			font-family: $sans;
+			font-size: .8em;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: .085rem;
+		}
+
+		dd {
+			margin-left: 0;
+			margin-bottom: 1em;
+		}
+
+		ul li {
+			text-align: center;
+		}
+	}
+
+	footer {
+		color: $white;
+		margin-top: 5em;
+		padding-bottom: 2em;
+
+		nav {
+			li {
+				display: block;
+				margin-top: 1em;
+	
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+
+			a {
+				border-bottom: none;
+				
+				&:hover {
+					border-bottom: none;
+	
+					h5 {
+						// border-bottom: 2px solid $white;
+					}
+				}
+			}
+
+			h5 {
+				display: inline;
+				margin-top: 1em;
+				padding-bottom: .1em;
+				border-bottom: 2px solid transparent;
+			}
+	
+			p {
+				margin-top: 0.3em;
+				text-align: center;
+				color: $white;
+			}
+
+			small {
+				font-size: .8em;
+				// font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: .25rem;
+			}
+		}
+	}
+}
+
+// Write a for loop to do this with provided variables? Is there a way to introduce exceptions?
+
+.pidan {
+	border-top-color: $pidan-1;
+
+	h2,
+	h3 {
+		color: $pidan-1;
+	}
+
+	a {
+		color: $pidan-1;
+
+		&:hover {
+			color: $pidan-1;
+			border-bottom-color: $pidan-1;
+		}
+	}
+
+	figure:nth-child(n+2) img {
+		// border: 1px solid #f1f1f1;
+	}
+
+	figcaption {
+		// color: $localytics-2;
+		color: #b1B1B1;
+	}
+
+	.tags {
+		a,
+		button {
+			color: $pidan-1;
+			border-color: $pidan-1;
+
+			&:hover {
+				color: $white;
+				background-color: $pidan-1;
+			}
+		}
+	}
+	
+	.hero {
+		background-image: url(../img/pidan-hero.jpg);
+		background-color: $pidan-1;
+
+		p {
+			color: $pidan-2;
+		}
+	}
+
+	.opening {
+		background-color: $pidan-1;
+	}
+
+	footer {
+		background-image: url(../img/kabam-hero.jpg);
+		background-position: center 20%;
+		background-color: $kabam-2;
+
+		h5 {
+			color: $white;
+		}
+	}
+}
+
+.localytics {
+	border-top-color: $localytics-5;
+
+	h2,
+	h3 {
+		color: $localytics-5;
+	}
+
+	a {
+		color: $localytics-5;
+
+		&:hover {
+			color: $localytics-5;
+			border-bottom-color: $localytics-5;
+		}
+	}
+
+	figure:nth-child(n+2) img {
+		border: 1px solid #f1f1f1;
+	}
+
+	figcaption {
+		// color: $localytics-2;
+		color: #b1B1B1;
+	}
+
+	.tags {
+		a,
+		button {
+			color: $localytics-5;
+			border-color: $localytics-5;
+
+			&:hover {
+				color: $white;
+				background-color: $localytics-5;
+				// border-color: darken($localytics-5, 25%);
+			}
+		}
+	}
+	
+	.hero {
+		background-image: url(../img/localytics-hero.jpg);
+		background-color: $localytics-5;
+
+		p {
+			color: $localytics-4;
+		}
+	}
+
+	.opening {
+		background-color: $localytics-5;
+	}
+
+	footer {
+		background-image: url(../img/kabam-hero.jpg);
+		background-position: center 20%;
+		background-color: $kabam-2;
+
+		h5 {
+			color: $white;
+		}
+	}
+}
+
+.kabam {
+	border-top-color: $kabam-1;
+
+	h2,
+	h3,
+	h4 {
+		color: $kabam-1;
+	}
+
+	a {
+		color: $kabam-1;
+
+		&:hover {
+			color: $kabam-1;
+			border-bottom-color: $kabam-1;
+		}
+	}
+
+	figcaption {
+		color: $kabam-2;
+	}
+
+	section:last-child,
+	section:last-of-type {
+		text-align: center;
+
+		figcaption {
+			text-align: left;
+		}
+	}
+
+	.tags a,
+	.tags button {
+		// background-color: $kabam2;
+		color: $kabam-2;
+		border-color: $kabam-2;
+
+		&:hover {
+			// background-color: darken($kabam2, 50%);
+			color: $white;
+			background-color: $kabam-2;
+			// border-color: darken($kabam-2, 25%);
+		}
+	}
+
+	.button {
+		// @extend .tags;
+		margin-bottom: 2em;
+	}
+	
+	.hero {
+		background-image: url(../img/kabam-hero.jpg);
+		background-position: center 20%;
+		background-color: $kabam-1;
+
+		p {
+			color: $kabam-2;
+		}
+	}
+
+	.opening {
+		background-color: $kabam-1;
+	}
+
+	footer {
+		background-image: url(../img/inkling-hero.jpg);
+		background-position-y: top;
+		background-color: $inkling-1;
+
+		h5 a {
+			color: $white;
+		}
+	}
+}
+
+// .tjeg {
+// 	border-top-color: $tjeg-3;
+
+// 	h2,
+// 	h3 {
+// 		color: $tjeg-3;
+// 	}
+
+// 	a {
+// 		color: $tjeg-3;
+
+// 		&:hover {
+// 			color: $tjeg-3;
+// 			border-bottom-color: $tjeg-3;
+// 		}
+// 	}
+
+// 	figure:nth-child(n+2) img {
+// 		border: 1px solid #f1f1f1;
+// 	}
+
+// 	figcaption {
+// 		// color: $localytics-2;
+// 		color: #b1B1B1;
+// 	}
+
+// 	.tags {
+// 		a,
+// 		button {
+// 			color: $tjeg-3;
+// 			border-color: $tjeg-3;
+
+// 			&:hover {
+// 				color: $white;
+// 				background-color: $tjeg-3;
+// 				// border-color: darken($localytics-5, 25%);
+// 			}
+// 		}
+// 	}
+	
+// 	.hero {
+// 		background-image: url(../img/tjeg-hero.jpg);
+// 		background-color: $tjeg-3;
+
+// 		p {
+// 			color: $tjeg-1;
+// 		}
+// 	}
+
+// 	.opening {
+// 		background-color: $tjeg-3;
+// 	}
+
+// 	footer {
+// 		background-image: url(../img/mood-hero.jpg);
+// 		background-position: center 20%;
+// 		background-color: $mood-2;
+
+// 		h5 {
+// 			color: $white;
+// 		}
+// 	}
+// }
+
+.mood {
+	h2,
+	h3 {
+		color: $mood-1;
+	}
+
+	.tags {
+		a,
+		button {
+			// background-color: $mood2;
+			color: $mood-2;
+			border-color: $mood-2;
+
+			&:hover {
+				// background-color: darken($mood2, 50%);
+				color: $white;
+				background-color: darken($mood-2, 25%);
+				border-color: darken($mood-2, 25%);
+			}
+		}
+	}
+	
+	.hero {
+		background-color: $mood-1;
+
+		p {
+			color: $mood-2;
+		}
+	}
+}
+
+.inkling-textbooks {
+	border-top-color: $inkling-1;
+
+	h2,
+	h3,
+	h4 {
+		color: $inkling-1;
+	}
+
+	a {
+		color: $inkling-1;
+
+		&:hover {
+			border-bottom-color: $inkling-1;
+			color: $inkling-1;
+		}
+	}
+
+	figcaption {
+		color: $inkling-2;
+	}
+
+	.tags {
+		a,
+		button {
+			color: $inkling-1;
+			border-color: $inkling-1;
+
+			&:hover {
+				color: $white;
+				background-color: $inkling-1;
+			}
+		}
+	}
+	
+	.hero {
+		background-image: url(../img/inkling-hero.jpg);
+		background-position-y: top;
+		background-color: $inkling-1;
+
+		p {
+			color: $inkling-2;
+		}
+	}
+
+	.opening {
+		background-color: $inkling-1;
+	}
+
+	footer {
+		background-image: url(../img/frommers-hero.jpg);
+		background-position: center 20%;
+		background-color: $frommers-1;
+
+		h5 a {
+			color: $white;
+		}
+	}
+}
+
+.inkling-evolvingliterature {
+	border-top-color: $evolvingliterature-2;
+
+	h2,
+	h3,
+	h4 {
+		color: $evolvingliterature-2;
+	}
+
+	a {
+		color: $evolvingliterature-2;
+
+		&:hover {
+			color: $evolvingliterature-2;
+			border-bottom-color: $evolvingliterature-2;
+		}
+	}
+
+	figcaption {
+		color: $evolvingliterature-1;
+	}
+
+	.tags {
+		a,
+		button {
+			color: $evolvingliterature-2;
+			border-color: $evolvingliterature-2;
+
+			&:hover {
+				color: $white;
+				background-color: $evolvingliterature-2;
+				// border-color: darken($localytics-5, 25%);
+			}
+		}
+	}
+	
+	.hero {
+		background-image: url(../img/evolvingliterature-hero.jpg);
+		background-color: $evolvingliterature-2;
+
+		p {
+			color: $evolvingliterature-2;
+		}
+	}
+
+	.opening {
+		background-color: $evolvingliterature-2;
+	}
+
+	footer {
+		background-image: url(../img/cincinnati-zoo-hero.jpg);
+		background-position: center 20%;
+		background-color: $cincinnati-zoo-2;
+
+		h5 a {
+			color: $white;
+		}
+	}
+}
+
+.frommers {
+	border-top-color: $frommers-1;
+
+	h2,
+	h3,
+	h4 {
+		color: $frommers-1;
+	}
+
+	a {
+		color: $frommers-1;
+
+		&:hover {
+			color: $frommers-1;
+			border-bottom-color: $frommers-1;
+		}
+	}
+
+	figcaption {
+		color: $frommers-1;
+	}
+
+	.tags {
+		a,
+		button {
+			color: $frommers-1;
+			border-color: $frommers-1;
+
+			&:hover {
+				color: $white;
+				background-color: $frommers-1;
+				// border-color: darken($localytics-5, 25%);
+			}
+		}
+	}
+	
+	.hero {
+		background-image: url(../img/frommers-hero.jpg);
+		background-color: $frommers-1;
+
+		p {
+			color: #e20048;
+		}
+	}
+
+	.opening {
+		background-color: $frommers-1;
+	}
+
+	footer {
+		background-image: url(../img/cincinnati-zoo-hero.jpg);
+		background-position: center 20%;
+		background-color: $cincinnati-zoo-2;
+
+		h5 a {
+			color: $white;
+		}
+	}
+}
+
+.cincinnati-zoo {
+	border-top-color: $cincinnati-zoo-1;
+
+	h2,
+	h3,
+	h4 {
+		color: $cincinnati-zoo-1;
+	}
+
+	a {
+		color: $cincinnati-zoo-1;
+
+		&:hover {
+			color: $cincinnati-zoo-1;
+			border-bottom-color: $cincinnati-zoo-1;
+		}
+	}
+
+	.tags {
+		a,
+		button {
+			// background-color: $cincinnati-zoo2;
+			color: $cincinnati-zoo-2;
+			border-color: $cincinnati-zoo-2;
+
+			&:hover {
+				// background-color: darken($cincinnati-zoo2, 50%);
+				color: $white;
+				background-color: $cincinnati-zoo-2;
+				// border-color: darken($cincinnati-zoo-2);
+			}
+		}
+	}
+	
+	.hero {
+		background-color: $cincinnati-zoo-2;
+
+		p {
+			color: $cincinnati-zoo-1;
+		}
+	}
+
+	.opening {
+		background-color: $cincinnati-zoo-2;
+	}
+}
+
+.hablamosjuntos {
+	border-top-color: $hablamos-juntos-1;
+
+	h2,
+	h3,
+	h4 {
+		color: $hablamos-juntos-1;
+	}
+
+	a {
+		color: $cincinnati-zoo-1;
+
+		&:hover {
+			color: $cincinnati-zoo-1;
+			border-bottom-color: $cincinnati-zoo-1;
+		}
+	}
+
+	.tags {
+		a,
+		button {
+			// background-color: $hablamosjuntos2;
+			color: $hablamos-juntos-2;
+			border-color: $hablamos-juntos-2;
+
+			&:hover {
+				// background-color: darken($hablamosjuntos2, 30%);
+				color: $white;
+				background-color: $hablamos-juntos-2;
+				// border-color: darken($hablamos-juntos-2, 25%);
+			}
+		}
+	}
+	
+	.hero {
+		background-color: $hablamos-juntos-1;
+
+		p {
+			color: $hablamos-juntos-2;
+		}
+	}
+
+	.opening {
+		background-color: $hablamos-juntos-2;
+	}
+}	
+
+.rwanda {
+	border-top-color: $rwanda-2;
+
+	h2,
+	h3 {
+		color: $rwanda-1;
+	}
+
+	a {
+		color: $rwanda-1;
+
+		&:hover {
+			color: $rwanda-1;
+			border-bottom-color: $rwanda-1;
+		}
+	}
+
+	figure:nth-child(n+2) img {
+		border: 1px solid #f1f1f1;
+	}
+
+	figcaption {
+		// color: $localytics-2;
+		color: #b1B1B1;
+	}
+
+	.tags {
+		a,
+		button {
+			// background-color: $hablamosjuntos2;
+			color: $rwanda-2;
+			border-color: $rwanda-2;
+
+			&:hover {
+				// background-color: darken($hablamosjuntos2, 30%);
+				color: $white;
+				background-color: $rwanda-2;
+				// border-color: darken($rwanda-2, 25%);
+			}
+		}
+	}
+	
+	.hero {
+		background-image: url(../img/rwanda-hero.jpg);
+		background-color: $rwanda-1;
+
+		p {
+			color: $rwanda-2;
+		}
+	}
+
+	.opening {
+		background-color: $rwanda-2;
+	}
+}

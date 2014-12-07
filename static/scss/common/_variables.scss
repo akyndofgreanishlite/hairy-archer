@@ -1,0 +1,265 @@
+//  Base
+$blockColor: #333333;
+$blockBackground: #eee;
+$center-width: 70%;
+$gutter: 4%;
+
+//  Demo
+$DemoPass: #dff0d8;
+$DemoFail: #f0d8d8;
+
+//  Media Query
+//  Width
+$width-xlg: 103.125rem; // 1650px
+$width-lg: 75.000rem;	// 1200px
+$width-med: 64.375rem; // 1030px
+$width-sm: 37.500rem; // 600px
+$width-xsm: 25.000rem; // 400px
+
+// Heights
+$height-sm: 31.250rem; // 500px
+$height-med: 43.750rem; // 700px
+$height-lg: 50.000rem; // 800px
+
+//  Colors
+$spice: #405B86;
+$red: #c92425;
+$cream: #fff0e0; // #f1e3c6;
+$black: #000;
+$white: #fff;
+$bluepurple: #3FA9F5;
+$maroon: #590A00;
+$rusty: #C82818;
+$yellow: #FFC52F; // #F3BB2B;
+$blue: #05669d;
+$off-black: #161616;
+$green-pale: rgb(112,143,135);
+
+$text-color: #333333;
+$link-color: $blue; //$rusty;
+$link-color-hover: darken($link-color, 25%);
+$link-sub-color: #666;
+$link-sub-color-hover: darken($link-sub-color, 40%);
+$background-color: #f5f5f2;
+
+
+
+// Old guys
+// $textColor: #222222;
+// $linkColor: #30466f;
+// $linkColor: #8E9958;
+// $linkColor: #DC7F4A;
+// $linkColorHover: darken($linkColor, 20%);
+
+
+
+// Project Specific Colors
+
+$pidan-1: #cd422f;
+$pidan-2: #fffdf3;
+
+$localytics-1: #333333; // Dark Gray
+$localytics-2: #4d4a49; // Dark Graybrown #4d4a4a
+$localytics-3: #f2f0ea; // Cream
+$localytics-4: #4482c0; // Blue
+$localytics-5: #f15a29; // Orange #e6543a
+
+$tjeg-1: #ED2D2E; // Red
+$tjeg-2: #FBE98B; // Yellow
+$tjeg-3: #798080; // Gray
+$tjeg-4: #2A2A2A; // Dark Gray
+
+$kabam-1: #423630;
+$kabam-2: #FFBD36;
+
+$mood-1: #3E3934; // #2F3034
+$mood-2: #E01E30;
+$mood-3: #98D152; // #41ACED
+
+$inkling-1: #1C78B5;
+$inkling-2: #57BAF3;
+$inkling-3: #00B492;
+
+$evolvingliterature-1: #333333;
+$evolvingliterature-2: #ed5846;
+$evolvingliterature-3: #ffda26;
+
+$frommers-1: #d40838;
+$frommers-2: #820038;
+$frommers-3: #fdc73a;
+
+$hablamos-juntos-1: #010101;
+$hablamos-juntos-2: #424242;
+
+$cincinnati-zoo-1: #5F4F53;
+$cincinnati-zoo-2: #FABC00;
+$cincinnati-zoo-3: #DBDEC3;
+$cincinnati-zoo-4: #F28648;
+$cincinnati-zoo-5: #5A6B8C;
+
+$rwanda-1: #231F20;
+$rwanda-2: #F8C217;
+
+$daap-experience-1: #BD375F;
+$daap-experience-2: #5DBF74;
+
+// Type
+$sans: "Marr Sans","Duplicate Sans", "Nitti Grotesk", Verdana, sans-serif; // "Nitti Grotesk Extrabold",
+// $sans: "Freight Sans Pro", "freight-sans-pro", Verdana, sans-serif;
+$serif: "Fern RE", "Custer RE", Georgia, serif;
+$serif-sc: "Fern RE Small Caps";
+// $serif: "elena-web-basic", "Elena Basic", Georgia, serif;
+$serif2: "jubilat", "Sentinel", Georgia, serif;
+
+@font-face {
+    font-family: "Duplicate Sans";
+    src: url(../fonts/DuplicateSans-Bold-Web.woff);
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Duplicate Sans";
+    src: url(../fonts/DuplicateSans-BoldItalic-Web.woff);
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Duplicate Sans";
+    src: url(../fonts/DuplicateSans-Regular-Web.woff);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Duplicate Sans";
+    src: url(../fonts/DuplicateSans-RegularItalic-Web.woff);
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Marr Sans";
+    src: url(../fonts/MarrSans-UltraBlack-Web.woff);
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Marr Sans";
+    src: url(../fonts/MarrSans-UltraBlackItalic-Web.woff);
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Marr Sans";
+    src: url(../fonts/MarrSans-Bold-Web.woff);
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Marr Sans";
+    src: url(../fonts/MarrSans-BoldItalic-Web.woff);
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Marr Sans";
+    src: url(../fonts/MarrSans-Semibold-Web.woff);
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Marr Sans";
+    src: url(../fonts/MarrSans-Semibold-Web.woff);
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Marr Sans";
+    src: url(../fonts/MarrSans-Medium-Web.woff);
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Marr Sans";
+    src: url(../fonts/MarrSans-MediumItalic-Web.woff);
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Marr Sans";
+    src: url(../fonts/MarrSans-Regular-Web.woff);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Marr Sans";
+    src: url(../fonts/MarrSans-RegularItalic-Web.woff);
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Marr Sans";
+    src: url(../fonts/MarrSans-Light-Web.woff);
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Marr Sans";
+    src: url(../fonts/MarrSans-LightItalic-Web.woff);
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Marr Sans";
+    src: url(../fonts/MarrSans-Thin-Web.woff);
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Marr Sans";
+    src: url(../fonts/MarrSans-ThinItalic-Web.woff);
+    font-weight: 200;
+    font-style: italic;
+}
+
+// .fernre {
+//   font-family: "Fern RE";
+//   font-style: normal;
+//   font-weight: normal;
+// }
+
+// .fernrebold {
+//   font-family: "Fern RE";
+//   font-style: normal;
+//   font-weight: bold;
+// }
+
+// .fernreitalic {
+//   font-family: "Fern RE";
+//   font-style: italic;
+//   font-weight: normal;
+// }
+
+.fernresmallcaps,
+.smallcaps {
+  font-family: "Fern RE Small Caps";
+  font-style: normal;
+  font-weight: normal;
+}
+
+

@@ -1,0 +1,813 @@
+/*------------------------------------*\
+ *  Built by extending Proto by @adamwhitcroft
+ *
+ *  Proto is a simple HTML & SCSS rapid
+ *  prototyping toolkit for responsive web design.
+ *
+ *  http://adamwhitcroft.com/proto/
+\*------------------------------------*/
+
+
+
+.block {
+	box-sizing: border-box;
+	width: 100%;
+	// background: $blockBackground;
+	// color: $grayLight;
+	overflow: hidden;
+}
+
+.center {
+	margin-right: auto !important;
+	margin-left: auto !important;
+	width: $center-width;
+	text-align: center;
+	// Note: Questionable whether to include or not?
+	float: none !important;
+	// clear: both;
+
+	&.ten,
+	&.twenty,
+	&.twentyfive,
+	&.thirty,
+	&.thirtythree,
+	&.forty,
+	&.fifty,
+	&.sixty,
+	&.sixtysix,
+	&.seventy,
+	&.seventyfive,
+	&.eighty,
+	&.ninety {
+		width: inherit;
+		text-align: inherit;
+	}
+}
+
+.left {
+	margin-left: $gutter * 2 !important;
+}
+
+.right {
+	float: right;
+
+	& > ul {
+		text-align: right;
+	}
+}
+
+.inline {
+	display: inline-block;
+}
+
+.grid .block {
+	float: left;
+}
+
+
+// Context has to be established for clears to work correctly.
+
+.grid {
+	.hundred {
+		width: 100%;
+	}
+
+	.ninety {
+		 @include grid-columns(10, 9);
+	}
+
+	.eighty {
+		@include grid-columns(5, 4);
+	}
+
+	.seventyfive {
+		@include grid-columns(4, 3);
+	}
+
+	.seventy {
+ 		@include grid-columns(10, 7);
+	}
+
+	.sixtysix {
+		@include grid-columns(3, 2);
+	}
+
+	.sixty {
+		@include grid-columns(5, 3);
+	}
+
+	.fifty {
+		@include grid-columns(2);
+	}
+
+	.forty {
+		@include grid-columns(5, 2);
+	}
+
+	.thirtythree {
+		@include grid-columns(3);
+	}
+
+	.thirty {
+		@include grid-columns(10, 3);
+	}
+
+	.twentyfive {
+		@include grid-columns(4);
+	}
+
+	.twenty {
+		@include grid-columns(5);
+	}
+
+	.ten {
+		@include grid-columns(10);
+	}
+
+	// TODO: nth-match to replace :nth-of-type
+
+	// .desktop-to-ninety:nth-child(6n),
+	// .desktop-to-eighty:nth-child(6n),
+	// .desktop-to-seventyfive:nth-child(6n),
+	// .desktop-to-seventy:nth-child(6n),
+	// .desktop-to-sixty:nth-child(6n),
+	// .desktop-to-sixtysix:nth-child(6n),
+	.fifty:nth-of-type(2n+2),
+	.thirtythree:nth-of-type(3n+3),
+	.twentyfive:nth-of-type(4n+4),
+	.twenty:nth-child(5n+5),
+	.ten:nth-of-type(10n+10),
+	.fifty2:nth-of-type(2n+2),
+	.thirtythree2:nth-of-type(3n+3),
+	.twentyfive2:nth-of-type(4n+4)
+	.ten + .ninety,
+	.twenty + .eighty,
+	.twentyfive + .seventyfive,
+	.thirty + .seventy,
+	.thirtythree + .sixtysix,
+	.forty + .sixty,
+	// .fifty + .fifty,
+	.sixtysix + .thirtythree,
+	.sixty + .forty,
+	.seventy + .thirty,
+	.seventyfive + .twentyfive,
+	.eighty + .twenty,
+	.ninety + .ten {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	// Targets the last in a row.
+	.fifty:nth-of-type(2n),
+	.thirtythree:nth-of-type(3n+1),
+	.twentyfive:nth-of-type(4n+1),
+	.twenty:nth-child(5n+1) {
+		// clear: left;
+		clear: right;
+	}
+
+	// Is it worth adding common combinations out to a certain degree of
+	// permutations, or can this be achieved through Sass loops?
+	.ten + .ten + .eighty {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.ninety,
+	.eighty,
+	.seventyfive,
+	.seventy,
+	.sixty,
+	.sixtysix,
+	.fifty,
+	.forty,
+	.thirtythree,
+	.thirty,
+	.twentyfive,
+	.twenty,
+	.ten {
+		margin-right: $gutter;
+		margin-left: 0;
+	}
+
+
+	// First - description here.
+
+	.ninety.first {
+		@include first(10, 9);
+	}
+
+	.eighty.first {
+		@include first(5, 4);
+	}
+
+	.seventyfive.first {
+		@include first(4, 3);
+	}
+
+	.seventy.first {
+ 		@include first(10, 7);
+	}
+
+	.sixtysix.first {
+		@include first(3, 2);
+	}
+
+	.sixty.first {
+		@include first(5, 3);
+	}
+
+	.fifty.first {
+		@include first(2);
+	}
+
+	.forty.first {
+		@include first(5, 2);
+	}
+
+	.thirtythree.first {
+		@include first(3);
+	}
+
+	.thirty.first {
+		@include first(10, 3);
+	}
+
+	.twentyfive.first {
+		@include first(4);
+	}
+
+	.twenty.first {
+		@include first(5);
+	}
+
+	.ten.first {
+		@include first(10);
+	}
+
+
+	// Only - description here.
+
+	.ninety.only {
+		@include only(10, 9);
+	}
+
+	.eighty.only {
+		@include only(5, 4);
+	}
+
+	.seventyfive.only {
+		@include only(4, 3);
+	}
+
+	.seventy.only {
+ 		@include only(10, 7);
+	}
+
+	.sixtysix.only {
+		@include only(3, 2);
+	}
+
+	.sixty.only {
+		@include only(5, 3);
+	}
+
+	.fifty.only {
+		@include only(2);
+	}
+
+	.forty.only {
+		@include only(5, 2);
+	}
+
+	.thirtythree.only {
+		@include only(3);
+	}
+
+	.thirty.only {
+		@include only(10, 3);
+	}
+
+	.twentyfive.only {
+		@include only(4);
+	}
+
+	.twenty.only {
+		@include only(5);
+	}
+
+	.ten.only {
+		@include only(10);
+	}
+}
+
+.not-desktop {
+	display: none;
+}
+
+.tablet {
+	display: none;
+}
+
+.phone {
+	display: none;
+}
+
+// Desktop
+
+@media (min-width: $width-lg) {
+
+	body {
+		// font-size: 156%;
+	}
+
+	.desktop-demo,
+	.not-tablet-demo,
+	.not-phone-demo {
+		background: $DemoPass;
+		color: darken($DemoPass,50%);
+	}
+
+	.not-desktop-demo,
+	.tablet-demo,
+	.phone-demo {
+		background: $DemoFail;
+		color: darken($DemoFail,50%);
+	}
+
+	.grid {
+
+		.desktop-to-hundred {
+			width: 100%;
+		}
+
+		.desktop-to-ninety {
+			@include grid-columns(10, 9);
+		}
+
+		.desktop-to-eighty {
+			@include grid-columns(5, 4);
+		}
+
+		.desktop-to-seventyfive {
+			@include grid-columns(4, 3);
+		}
+
+		.desktop-to-seventy {
+			@include grid-columns(10, 7);
+		}
+
+		.desktop-to-sixtysix {
+			@include grid-columns(3, 2);
+		}
+
+		.desktop-to-sixty {
+			@include grid-columns(5, 3);
+		}
+
+		.desktop-to-fifty {
+			@include grid-columns(2);
+		}
+
+		.desktop-to-forty {
+			@include grid-columns(5, 2);
+		}
+
+		.desktop-to-thirtythree {
+			@include grid-columns(3);
+		}
+
+		.desktop-to-thirty {
+			@include grid-columns(10, 3);
+		}
+
+		.desktop-to-twentyfive {
+			@include grid-columns(4);
+		}
+
+		.desktop-to-twenty {
+			@include grid-columns(5);
+		}
+
+		.desktop-to-ten {
+			@include grid-columns(10);
+		}
+
+		.desktop-to-ninety,
+		.desktop-to-eighty,
+		.desktop-to-seventyfive,
+		.desktop-to-seventy,
+		.desktop-to-sixty,
+		.desktop-to-sixtysix,
+		.desktop-to-fifty,
+		.desktop-to-forty,
+		.desktop-to-thirtythree,
+		.desktop-to-thirty,
+		.desktop-to-twentyfive,
+		.desktop-to-twenty,
+		.desktopt-to-ten {
+			margin-right: $gutter;
+		}
+
+		// .desktop-to-ninety:nth-child(6n),
+		// .desktop-to-eighty:nth-child(6n),
+		// .desktop-to-seventyfive:nth-child(6n),
+		// .desktop-to-seventy:nth-child(6n),
+		// .desktop-to-sixty:nth-child(6n),
+		// .desktop-to-sixtysix:nth-child(6n),
+		.desktop-to-fifty:nth-child(2n),
+		// .desktop-to-forty:nth-child(6n),
+		.desktop-to-thirtythree:nth-child(3n),
+		// .desktop-to-thirty:nth-child(6n),
+		.desktop-to-twentyfive:nth-child(4n),
+		.desktop-to-twenty:nth-child(5n),
+		.desktopt-to-ten:nth-child(6n) {
+			margin-right: 0;
+		}
+	}
+}
+
+// Tablet Up To Desktop
+
+@media (min-width: $width-med) and (max-width: $width-lg - 0.063rem) {
+	body {
+		// font-size: 134%;
+	}
+
+	.tablet {
+		display: block;
+	}
+
+	.not-desktop {
+		display: none;
+	}
+
+	.not-tablet {
+		display: none;
+	}
+
+	.desktop-demo,
+	.tablet-demo,
+	.not-phone-demo {
+		background: $DemoPass;
+		color: darken($DemoPass,50%);
+	}
+
+	.not-desktop-demo,
+	.not-tablet-demo,
+	.phone-demo {
+		background: $DemoFail;
+		color: darken($DemoFail,50%);
+	}
+
+	.grid {
+
+		.tablet-to-hundred {
+			width: 100%;
+		}
+
+		.tablet-to-ninety {
+			@include grid-columns(10, 9);
+		}
+
+		.tablet-to-eighty {
+			@include grid-columns(5, 4);
+		}
+
+		.tablet-to-seventyfive {
+			@include grid-columns(4, 3);
+		}
+
+		.tablet-to-seventy {
+	 		@include grid-columns(10, 7);
+		}
+
+		.tablet-to-sixtysix {
+			@include grid-columns(3, 2);
+		}
+
+		.tablet-to-sixty {
+			@include grid-columns(5, 3);
+		}
+
+		.tablet-to-fifty {
+			@include grid-columns(2);
+		}
+
+		.tablet-to-forty {
+			@include grid-columns(5, 2);
+		}
+
+		.tablet-to-thirtythree {
+			@include grid-columns(3);
+		}
+
+		.tablet-to-thirty {
+			@include grid-columns(10, 3);
+		}
+
+		.tablet-to-twentyfive {
+			@include grid-columns(4);
+		}
+
+		.tablet-to-twenty {
+			@include grid-columns(5);
+		}
+
+		.tablet-to-ten {
+			@include grid-columns(10);
+		}
+
+		.tablet-to-ninety,
+		.tablet-to-eighty,
+		.tablet-to-seventyfive,
+		.tablet-to-seventy,
+		.tablet-to-sixty,
+		.tablet-to-sixtysix,
+		.tablet-to-fifty,
+		.tablet-to-forty,
+		.tablet-to-thirtythree,
+		.tablet-to-thirty,
+		.tablet-to-twentyfive,
+		.tablet-to-twenty,
+		.tablet-to-ten {
+			margin-right: $gutter * 2;
+			margin-left: 0;
+		}
+
+		// .desktop-to-ninety:nth-child(6n),
+		// .desktop-to-eighty:nth-child(6n),
+		// .desktop-to-seventyfive:nth-child(6n),
+		// .desktop-to-seventy:nth-child(6n),
+		// .desktop-to-sixty:nth-child(6n),
+		// .desktop-to-sixtysix:nth-child(6n),
+		.tablet-to-fifty:nth-child(2n),
+		// .tablet-to-forty:nth-child(6n),
+		.tablet-to-thirtythree:nth-child(3n),
+		// .tablet-to-thirty:nth-child(6n),
+		.tablet-to-twentyfive:nth-child(4n),
+		.tablet-to-twenty:nth-child(5n),
+		.tablet-to-ten:nth-child(6n) {
+			margin-right: 0;
+			margin-left: 0;
+		}
+
+	}
+
+}
+
+// Tablet Down To Phone
+
+@media (max-width:$width-med - 0.063rem) {
+
+	body {
+		// font-size: 125%; // 112.5%;
+	}
+
+	.container {
+		width: 90% !important;
+	}
+
+	.desktop {
+		display: none;
+	}
+
+	.not-desktop {
+		display: block;
+	}
+
+	.tablet {
+		display: block;
+	}
+
+	.not-tablet {
+		display: none;
+	}
+
+	.phone {
+		display: block;
+	}
+
+	.not-phone {
+		display: none;
+	}
+
+	.not-desktop-demo,
+	.tablet-demo,
+	.phone-demo {
+		background: $DemoPass;
+		color: darken($DemoPass,50%);
+	}
+
+	.desktop-demo,
+	.not-tablet-demo,
+	.not-phone-demo {
+		background: $DemoFail;
+		color: darken($DemoFail,50%);
+	}
+
+	.grid {
+		.phone-to-hundred {
+			width: 100%;
+		}
+
+		.phone-to-ninety {
+			@include grid-columns(10, 9);
+		}
+
+		.phone-to-eighty {
+			@include grid-columns(5, 4);
+		}
+
+		.phone-to-seventyfive {
+			@include grid-columns(4, 3);
+		}
+
+		.phone-to-seventy {
+	 		@include grid-columns(10, 7);
+		}
+
+		.phone-to-sixtysix {
+			@include grid-columns(3, 2);
+		}
+
+		.phone-to-sixty {
+			@include grid-columns(5, 3);
+		}
+
+		.phone-to-fifty {
+			@include grid-columns(2);
+		}
+
+		.phone-to-forty {
+			@include grid-columns(5, 2);
+		}
+
+		.phone-to-thirtythree {
+			@include grid-columns(3);
+		}
+
+		.phone-to-thirty {
+			@include grid-columns(10, 3);
+		}
+
+		.phone-to-twentyfive {
+			@include grid-columns(4);
+		}
+
+		.phone-to-twenty {
+			@include grid-columns(5);
+		}
+
+		.phone-to-ten {
+			@include grid-columns(10);
+		}
+
+		// .phone-to-ninety {
+		// 	width: 90%;
+		// }
+
+		// .phone-to-eighty {
+		// 	width: 80%;
+		// }
+
+		// .phone-to-seventyfive {
+		// 	width: 75%;
+		// }
+
+		// .phone-to-seventy {
+		// 	width: 70%;
+		// }
+
+		// .phone-to-sixtysix {
+		// 	width: 66.666%;
+		// }
+
+		// .phone-to-sixty {
+		// 	width: 60%;
+		// }
+
+		// .phone-to-fifty {
+		// 	width: 50% - $gutter;
+		// }
+
+		// .phone-to-forty {
+		// 	width: 40% - $gutter;
+		// }
+
+		// .phone-to-thirtythree {
+		// 	width: 33.333% - $gutter;
+		// }
+
+		// .phone-to-thirty {
+		// 	width: 30% - $gutter;
+		// }
+
+		// .phone-to-twentyfive {
+		// 	width: 25% - $gutter;
+		// }
+
+		// .phone-to-twenty {
+		// 	width: 20% - $gutter;
+		// }
+
+		// .phone-to-ten {
+		// 	width: 10% - $gutter;
+		// }
+	}
+}
+
+
+// Phone
+
+@media (max-width: $width-sm) {
+
+	body,
+	nav li {
+		// font-size: 112.5%;
+	}
+
+	.container {
+		width: 90% !important;
+
+		div.block.fifty:nth-of-type(2n) > h2 {
+			margin-top: 2rem;
+		}
+
+		p {
+			margin-top: 0.15rem;
+		}
+	}
+
+	.hero > .container {
+		p {
+			margin-top: 10% !important;
+		}
+
+		.badge-appstore {
+			width: 40%;
+			margin-top: 1rem;
+		}
+	}
+
+	footer {
+		.badge-appstore {
+			width: 40%;
+			margin-top: 1rem;
+			margin-bottom: 2rem;
+		}
+	}
+
+	.right > ul {
+		float: left;
+	}
+
+	.block,
+	.grid .block {
+		clear: left; /* better results than float:none; after tests */
+		width: 100%;
+		display: block;
+	}
+
+	.center {
+		margin: 0;
+		width: 100%;
+	}
+
+	.center-on-phone {
+		margin: 0 auto;
+		// width: 80%;
+		text-align: center;
+		float: none;
+	}
+
+	.desktop {
+		display: none;
+	}
+
+	.tablet {
+		display: none;
+	}
+
+	.phone {
+		display: block;
+	}
+
+	.not-phone {
+		display: none !important;
+	}
+
+	.not-desktop-demo,
+	.not-tablet-demo,
+	.phone-demo {
+		background: $DemoPass;
+		color: darken($DemoPass,50%);
+	}
+
+	.desktop-demo,
+	.tablet-demo,
+	.not-phone-demo {
+		background: $DemoFail;
+		color: darken($DemoFail,50%);
+	}
+}
