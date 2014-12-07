@@ -7,19 +7,22 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="{% static '/static/css/bootstrap.css' %}">
+        {# <link rel="stylesheet" href="{% static '/static/css/main.css' %}"> #}
         <style>
             body {
                 padding-top: 50px;
                 padding-bottom: 20px;
             }
         </style>
-        <link rel="stylesheet" href="{% static '/static/css/bootstrap-theme.css' %}">
+        {# <link rel="stylesheet" href="{% static '/static/css/bootstrap-theme.css' %}"> #}
+        <link href="//cloud.webtype.com/css/ed4377a1-dcfc-4cbd-813a-b66bfdc79edc.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="{% static '/static/css/main.css' %}">
         <script src="{% static '/static/js/vendor/modernizr-2.6.2.js' %}"></script>
+        {% block head %}{% endblock %}
     </head>
 
-    <body>
+    <body class="{% block body_class %}{% endblock %}">
+    {% comment %}
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -60,13 +63,15 @@
         </div><!--/.navbar-collapse -->
       </div>
     </div>
+    {% endcomment %}
 
     {% block body %}
     {% endblock %}
-
+    {% comment %}
     <script src="{% static '/static/js/vendor/jquery-1.10.1.js' %}"></script>
     <script src="{% static '/static/js/vendor/bootstrap.js' %}"></script>
     <script src="{% static '/static/js/main.js' %}"></script>
+    {% endcomment %}
   </body>
 
   {% block scripts %}

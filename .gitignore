@@ -41,3 +41,9 @@ config.ru
 ######################
 node_modules/
 node_modules/*
+
+# Cactus generated files #
+.build/
+.deploy/
+
+.sass-cache/

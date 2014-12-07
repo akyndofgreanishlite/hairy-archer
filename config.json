@@ -1,7 +1,7 @@
 {
-    "aws-access-key": "AKIAJXMJMHI37O2N6LUA",
-    "aws-bucket-name": "adsnative-website",
-    "aws-bucket-website": "adsnative-website.s3-website-us-west-2.amazonaws.com",
+    "aws-access-key": "AKIAIKD4EGZVN7EU4HLA",
+    "aws-bucket-name": "jamesontyler.com",
+    "aws-bucket-website": "jamesontyler.com.s3-website-us-west-1.amazonaws.com",
     "port": 8463,
     "prettify": true
 }
