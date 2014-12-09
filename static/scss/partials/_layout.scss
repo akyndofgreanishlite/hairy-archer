@@ -167,6 +167,23 @@ main {
 		// color: #3E89C6; // #2C5BD4; // OLD > #4575FF
 	}
 
+	a {
+		text-decoration: none;
+		box-shadow: 0 4px rgba(0, 0, 0, 0.05);
+		-webkit-transition: all 0.4s ease-out;
+		-moz-transition: all 0.4s ease-out;
+		-ms-transition: all 0.4s ease-out;
+		-o-transition: all 0.4s ease-out;
+		transition: all 0.4s ease-out;
+
+		// &:link,
+		// &:active,
+		// &:visited,
+		&:hover {
+			color: rgb(92, 165, 130);
+		}
+	}
+
 	ul.social-media {
 		text-align: center;
 		list-style-type: none;
@@ -202,6 +219,16 @@ main {
 
 
 		}
+	}
+
+	.attribution {
+		text-align: center;
+		font-size: .9rem;
+		margin-top: 4rem;
+		// /* background-color: rgba(0, 0, 0, 0.025); */
+		padding: .5rem;
+		border-radius: 4px;
+		border: 1px solid rgba(0, 0, 0, 0.05);
 	}
 }
 
