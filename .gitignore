@@ -38,11 +38,12 @@ Thumbs.db
 config.ru
 
 # Node Modules #
-######################
+################
 node_modules/
 node_modules/*
 
 # Cactus generated files #
+##########################
 .build/
 .deploy/
 

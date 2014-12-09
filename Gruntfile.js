@@ -27,17 +27,17 @@ module.exports = function(grunt) {
                 tasks: ['sass'],
             }
         },
-        compress: {
-            main: {
-                // options: {
-                //     mode: 'gzip'
-                // },
-                expand: true,
-                cwd: 'static/',
-                src: ['**/*'],
-                // dest: 'public/'
-            }
-        }
+        // compress: {
+        //     main: {
+        //         // options: {
+        //         //     mode: 'gzip'
+        //         // },
+        //         expand: true,
+        //         cwd: 'static/',
+        //         src: ['**/*'],
+        //         // dest: 'public/'
+        //     }
+        // }
     });
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');

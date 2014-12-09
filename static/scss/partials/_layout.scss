@@ -134,8 +134,9 @@ main {
 }
 
 .home {
+	line-height: 1.5em;
 	text-align: center;
-	// color: $green-pale;
+	color: $green-pale;
 	background-color: #F8F8F8;
 	padding-top: 4rem;
 	margin: 0;
@@ -144,26 +145,26 @@ main {
 	section {
 		max-width: 64rem;
 		padding: 8rem 3rem 6rem;
-		background-color: #4E483C;// #F1C32F;
+		// background-color: #4E483C;// #F1C32F;
 		border-radius: 4px;
-		box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+		// box-shadow: 0 2px 4px rgba(0,0,0,0.25);
 	}
 
 	.color-one {
 		font-weight: 600;
-		color: #ED4624;
+		// color: #ED4624;
 	}
 
 	.color-two {
-		color: #EE5D26;
+		// color: #EE5D26;
 	}
 
 	.color-three {
-		color: #EF8E2A;
+		// color: #EF8E2A;
 	}
 
 	.color-four {
-		color: #3E89C6; // #2C5BD4; // OLD > #4575FF
+		// color: #3E89C6; // #2C5BD4; // OLD > #4575FF
 	}
 
 	ul.social-media {
@@ -185,17 +186,18 @@ main {
 		}
 
 		a {
-			padding: .8rem .9rem .9rem;
+			padding: .9rem;
 			display: inline-block;
 			box-shadow: none;
 			width: 3.5rem;
 			height: 3.5rem;
 			border-radius: 50%;
-			color: #0051A4;
-			border: 1px solid rgba(#0051A4, .25);
+			color: $green-pale;
+			// color: #0051A4;
+			border: 1px solid rgba($green-pale, .25); // #0051A4
 
 			&:hover {
-				border-color: #0051A4;
+				border-color: $green-pale; // #0051A4;
 			}
 
 
@@ -395,7 +397,7 @@ main {
 
 	section,
 	aside {
-		width: 92% !important;
+		width: 98% !important;
 
 		&.hero {
 			width: 100% !important;
@@ -403,8 +405,8 @@ main {
 	}
 
 	.home {
-		border-top: .25rem solid white;
-		line-height: 1.6rem;
+		// border-top: .25rem solid white;
+		line-height: 1.7rem;
 
 		section {
 			width: 97% !important;
@@ -471,6 +473,9 @@ main {
 
 	.home {
 		// font-size: 118%;
+		section {
+			width: 100%;
+		}
 	}
 
 	.project-detail {
@@ -521,6 +526,13 @@ main {
 
 	.home {
 		// font-size: 125%;
+		// -webkit-font-smoothing: antialiased;
+		// -moz-font-smoothing: antialiased;
+		// font-smoothing: antialiased;
+
+		section {
+			width: 82%;
+		}
 	}
 
 	.project-detail figure.full-bleed {
@@ -532,7 +544,7 @@ main {
 // Width X-Large  103.125em
 @media (min-width: $width-xlg) {
 	body {
-		font-size: 162.5%;
+		// font-size: 162.5%;
 		line-height: 1.5em;
 	}
 
@@ -545,6 +557,11 @@ main {
 
 	.opening .lead {
 		width: 56%;
+	}
+
+	.home section {
+		width: 90%;
+		background-color: purple;
 	}
 
 	.project-detail figure {
